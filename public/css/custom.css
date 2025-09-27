@@ -340,7 +340,7 @@ body {
 .cb-cursor:before {
   background: var(--accent-color);
 }
-
+/* 
 .preloader {
   position: fixed;
   top: 0;
@@ -394,7 +394,7 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 .bg-section {
   width: 100%;
@@ -2772,7 +2772,7 @@ header.main-header .header-sticky.active {
   background: url("../images/page-header-bg.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 225px 0 115px;
+  padding: 18rem  115px;
   overflow: hidden;
 }
 
@@ -2865,12 +2865,12 @@ header.main-header .header-sticky.active {
 .mission-vision-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
 .mission-vision-item {
-  width: calc(50% - 15px);
+  width: 100%;
 }
 
 .mission-vision-item .icon-box {
@@ -2882,7 +2882,7 @@ header.main-header .header-sticky.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .mission-vision-item .icon-box:before {
@@ -3013,6 +3013,202 @@ header.main-header .header-sticky.active {
   text-transform: capitalize;
   margin: 0;
 }
+
+
+.our1-approach{
+	padding: 100px 0;
+}
+
+.our1-approach-content{
+	position: sticky;
+	top: 30px;
+}
+
+.mission-vision-item{
+	position: relative;
+	background: var(--accent-color);
+  color: var(--primary-color);
+	border: 1px solid var(--divider-color);
+    border-radius: 20px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.mission-vision-item:last-child{
+	margin-bottom: 0;
+}
+
+.mission-vision-item::before{
+	content: '';
+    position: absolute;
+	top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-color);
+    height: 0;
+    width: 100%;
+	transition: all 0.4s ease-in-out;
+}
+
+.mission-vision-item.active::before,
+.mission-vision-item:hover::before{
+	top: 0;
+	height: 100%;
+}
+
+.mission-vision-header,
+.mission-vision-content{
+	position: relative;
+	z-index: 1;
+}
+
+.mission-vision-header{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 20px;
+}
+
+.mission-vision-header .icon-box img{
+	width: 100%;
+	max-width: 40px;
+	transition: all 0.4s ease-in-out;
+}
+
+.mission-vision-item.active .icon-box img,
+.mission-vision-item:hover .icon-box img{
+	filter: brightness(0) invert(1);
+}
+
+.mission-vision-title{
+	width: calc(100% - 70px);
+}
+
+.mission-vision-title h3{
+	font-size: 20px;
+	text-transform: capitalize;
+	transition: all 0.4s ease-in-out;
+}
+
+.mission-vision-content p{
+	margin: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+.mission-vision-item.active .mission-vision-title h3,
+.mission-vision-item:hover .mission-vision-title h3,
+.mission-vision-item.active .mission-vision-content p,
+.mission-vision-item:hover .mission-vision-content p{
+	color: var(--white-color);
+}
+
+
+
+@media only screen and (max-width: 991px){
+  .our1-approach{
+		padding: 50px 0;
+	}
+
+	.our1-approach-content{
+		position: initial;
+		margin-bottom: 30px;
+	}
+	
+	.mission-vision-item{
+		padding: 20px;
+		margin-bottom: 20px;
+	}
+
+}
+
+
+.our-innovation{
+  padding: 100px 0;
+}
+
+.our-innovation-content{
+  margin-right: 30px;
+}
+
+.skills-progress-bar{
+  margin-bottom: 40px;
+}
+
+.skills-progress-bar:last-child{
+  margin-bottom: 0px;
+}
+
+.skills-progress-bar .skill-data{
+display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.skills-progress-bar .skill-data .skill-title,
+.skills-progress-bar .skill-data .skill-no{
+font-size: 20px;
+font-weight: 600;
+line-height: normal;
+text-transform: capitalize;
+  color: var(--primary-color);
+}
+
+.skills-progress-bar .skill-data .skill-title{
+font-family: var(--accent-font);
+}
+
+.skills-progress-bar .skillbar .skill-progress{
+position: relative;
+width: 100%;
+height: 16px;
+background: var(--secondary-color);
+border-radius: 100px;
+  overflow: hidden;
+}
+
+.skills-progress-bar .skillbar .skill-progress .count-bar{
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+background: var(--accent-color);
+border-radius: 100px;
+}
+
+.our-innovation-image{
+  position: relative;
+  padding: 0 55px 75px 0;
+}
+
+.our-innovation-img-1 figure,
+.our-innovation-img-2 figure{
+  display: block;
+  border-radius: 50%;
+}
+
+.our-innovation-img-1 img,
+.our-innovation-img-2 img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.our-innovation-img-1 img{
+  aspect-ratio: 1 / 1.0177;
+}
+
+.our-innovation-img-2{
+  max-width: 270px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 10px solid var(--white-color);
+  border-radius: 50%;
+  z-index: 1; 
+}
+
 
 .value-img-2 {
   width: calc(100% - 240px);
@@ -4455,7 +4651,7 @@ header.main-header .header-sticky.active {
 }
 
 .contact-us-content {
-  width: calc(50% - 15px);
+  width: 100%;
   background-color: var(--white-color);
   border-radius: 20px;
   padding: 40px;
